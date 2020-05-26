@@ -1,28 +1,73 @@
 <html>
-    <head>
-        <Title>Test</Title>
-    </head>
-    <body>
-        <div style="display:flex;width: 100%; height: 100%; justify-content: center;align-items: center;">
-            <div class="hotspot" style="display: flex; width: 50%; height: 50%;">
-                <img src="https://www.w3schools.com/tags/workplace.jpg" alt="Workplace" usemap="#workmap" style="width:100%;height:100%;object-fit: contain;">
+  <head>
+      
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-                <map name="workmap">
-                  <area shape="rect" coords="34,44,270,350" alt="Computer" href="#computer">
-                  <area shape="rect" coords="290,172,333,250" alt="Phone" href="#phone">
-                  <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="#coffee">
-                </map> 
+    <title>Test</title>
+  </head>
+  <body>
+    <div
+      style="
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+      "
+    >
+      <div class="hotspot" style="display: flex; width: 50%; height: 50%;">
+        <img
+          src="https://www.w3schools.com/tags/workplace.jpg"
+          alt="Workplace"
+          usemap="#workmap"
+          style="width: 100%; height: 100%; object-fit: contain;"
+        />
 
-            </div>
+        <map name="workmap">
+          <area
+            shape="rect"
+            coords="34,44,270,350"
+            alt="Computer"
+            href="#computer"
+          />
+          <area
+            shape="rect"
+            coords="290,172,333,250"
+            alt="Phone"
+            href="#phone"
+          />
+          <area
+            shape="circle"
+            coords="337,300,44"
+            alt="Cup of coffee"
+            href="#coffee"
+          />
+        </map>
+      </div>
+    </div>
+  </body>
+  <script>
+    const hotspots = document.getElementsByClassName("hotspot");
+    [...hotspots].forEach((element) => {
+      if (element.hasAttribute("h-height") && element.hasAttribute("h-width")) {
+
+        const hHeight=Number(element.getAttribute('h-height'));
+        const hWidth=Number(element.getAttribute('h-width'));
+        let height=Number(element.offsetHeight)
+        let width=Number(element.offsetWidth)
+        var fraction=1;
+        if(hHeight>=height){
+            var fraction=height/hHeight;
+            
+        }
+        else if(hHeight< height){
+            var 
+        }
         
-        </div>
-        
-    </body>
-    <script>
-            const hotspots=document.getElementsByClassName('hotspot');
-            [...hotspots].forEach(element => {
-                element.setAttribute("h-height",element.offsetHeight);
-                element.setAttribute("h-width",element.offsetWidth);
-            });
-    </script>
+      } else {
+        element.setAttribute("h-height", element.offsetHeight);
+        element.setAttribute("h-width", element.offsetWidth);
+      }
+    });
+  </script>
 </html>

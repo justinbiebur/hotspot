@@ -20,7 +20,7 @@
     </body>
     <script>
             const hotspots=document.getElementsByClassName('hotspot');
-            hotspots.forEach(element => {
+            [...hotspots].forEach(element => {
                 element.setAttribute("h-height",element.offsetHeight);
                 element.setAttribute("h-width",element.offsetWidth);
             });

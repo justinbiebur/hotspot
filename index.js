@@ -105,7 +105,7 @@ function Main(){
     }
 
     function Run(){
-
+        
         window.addEventListener('resize',()=>{
             Main();
         })

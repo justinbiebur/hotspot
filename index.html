@@ -36,12 +36,7 @@
             alt="Phone"
             href="#phone"
           />
-          <area
-            shape="circle"
-            coords="337,300,44"
-            alt="Cup of coffee"
-            href="#coffee"
-          />
+         
         </map>
       </div>
     </div>
@@ -79,30 +74,35 @@
             if(calculatedWidth==width){
                 var setWidth=(hWidth>calculatedWidth?calculatedWidth/hWidth:calculatedWidth*hWidth);
                 dimensions[0]*=setWidth;
-                dimensions[1]*=setWidth;
+                dimensions[2]*=setWidth;
             }
             else{
                 var setWidth=(hWidth>calculatedWidth?calculatedWidth/hWidth:calculatedWidth*hWidth);
                 dimensions[0]+=(width-calculatedWidth)/2;
                 dimensions[0]*=setWidth ;
-                dimensions[1]-=(width-calculatedWidth)/2;
-                dimensions[1]*=setWidth ;
+                dimensions[2]-=(width-calculatedWidth)/2;
+                dimensions[2]*=setWidth ;
             }
 
 
             if(calculatedHeight==height){
+               
                 var setHeight=(hHeight>calculatedHeight?calculatedHeight/hHeight:calculatedHeight*hHeight);
-                dimensions[2]*=setHeight;
+                dimensions[1]*=setHeight;
                 dimensions[3]*=setHeight;
             }
             else{
+                console.log(hHeight,calculatedHeight)
                 var setHeight=(hHeight>calculatedHeight?calculatedHeight/hHeight:calculatedHeight*hHeight);
-                dimensions[2]+=(height-calculatedHeight)/2;
-                dimensions[2]*=setHeight ;
-                dimensions[3]-=(height-calculatedHeight)/2;
+                console.log(setHeight)
+                dimensions[1]*=setHeight ;
+                dimensions[1]+=(height-calculatedHeight)/2;
+                console.log((height-calculatedHeight)/2)
                 dimensions[3]*=setHeight ;
+                dimensions[3]+=(height-calculatedHeight)/2;
+                
             }
-            element.setAttribute('coord',stringify(dimensions));
+            element.setAttribute('coords',stringify(dimensions));
         })
     }
 
@@ -117,10 +117,12 @@
     function stringify(array){
         var string="";
         array.forEach((element)=>{
+            element=Math.round(element)
             string+=element;
             string+=","
         })
-        string.trim(",");
+        string = string.substring(0, string.length - 1);
+        console.log(string)
         return string;
     }
   </script>

@@ -15,7 +15,7 @@
         align-items: center;
       "
     >
-      <div class="hotspot" style="display: flex; width: 50%; height: 50%;">
+      <div class="hotspot" h-height="370" h-width="400" style="display: flex; width: 50%; height: 50%;">
         <img
           src="https://www.w3schools.com/tags/workplace.jpg"
           alt="Workplace"
@@ -60,17 +60,49 @@
         if(width<=height){
             var calculatedHeight=ar>1?width/ar:width*ar;    //taking into account the origibak aspect ratio of the image
             var calculatedWidth=width;
+            
         }else{
-            var calculatedWidth=ar>1?height*ar:height/ar;    //taking into account the origibak aspect ratio of the image
+            var calculatedWidth=(ar>1?height*ar:height/ar);    //taking into account the origibak aspect ratio of the image
             var calculatedHeight=height;
+           
         }
-        adjustMaps(element,calculatedWidth,calculatedHeight);   //adjust the reactangular areas of interest
+        adjustMaps(element,calculatedWidth,calculatedHeight,width,height,hWidth,hHeight);   //adjust the reactangular areas of interest
         
       } else {
         element.setAttribute("h-height", element.offsetHeight);
         element.setAttribute("h-width", element.offsetWidth);
       }
     });
-    
+   function adjustMaps(parent,calculatedWidth,calculatedHeight,width,height,hWidth,hHeight){
+        [...parent.children[1].children].forEach((element)=>{
+            const dimensions=numerify(element.getAttribute('coords'));  //get co-ordinates in a proper format
+            if(calculatedWidth==width){
+                var setWidth=(hWidth>calculatedWidth?calculatedWidth/hWidth:calculatedWidth*hWidth);
+                dimensions[0]*=setWidth;
+                dimensions[1]*=setWidth;
+            }
+            else{
+                var setWidth=(hWidth>calculatedWidth?calculatedWidth/hWidth:calculatedWidth*hWidth);
+                dimensions[0]+=(width-calculatedWidth)/2;
+                dimensions[0]*=setWidth ;
+                dimensions[1]-=(width-calculatedWidth)/2;
+                dimensions[1]*=setWidth ;
+            }
+
+
+            if(calculatedHeight==height){
+                var setHeight=(hHeight>calculatedHeight?calculatedHeight/hHeight:calculatedHeight*hHeight);
+                dimensions[2]*=setHeight;
+                dimensions[3]*=setHeight;
+            }
+            else{
+                var setHeight=(hHeight>calculatedHeight?calculatedHeight/hHeight:calculatedHeight*hHeight);
+                dimensions[2]+=(height-calculatedHeight)/2;
+                dimensions[2]*=setHeight ;
+                dimensions[3]-=(height-calculatedHeight)/2;
+                dimensions[3]*=setHeight ;
+            }
+        })
+    }
   </script>
 </html>

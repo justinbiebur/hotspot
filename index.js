@@ -77,6 +77,7 @@ function Main(){
                 dimensions[1]*=setHeight;
                 dimensions[3]*=setHeight;
           
+                console.log(setHeight,setWidth)
           
             element.setAttribute('coords',stringify(dimensions));
         })
@@ -104,5 +105,9 @@ function Main(){
     }
 
     function Run(){
-        
+
+        window.addEventListener('resize',()=>{
+            Main();
+        })
     }
+    Run()

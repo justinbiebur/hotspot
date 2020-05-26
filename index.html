@@ -75,7 +75,7 @@
     });
    function adjustMaps(parent,calculatedWidth,calculatedHeight,width,height,hWidth,hHeight){
         [...parent.children[1].children].forEach((element)=>{
-            const dimensions=numerify(element.getAttribute('coords'));  //get co-ordinates in a proper format
+            let dimensions=numerify(element.getAttribute('coords'));  //get co-ordinates in a proper format
             if(calculatedWidth==width){
                 var setWidth=(hWidth>calculatedWidth?calculatedWidth/hWidth:calculatedWidth*hWidth);
                 dimensions[0]*=setWidth;
@@ -102,7 +102,26 @@
                 dimensions[3]-=(height-calculatedHeight)/2;
                 dimensions[3]*=setHeight ;
             }
+            element.setAttribute('coord',stringify(dimensions));
         })
+    }
+
+    function numerify(string){
+        var dimensions=[];
+        var temp=string.split(',');
+        temp.forEach(element => {
+            dimensions.push(Number(element.trim()));
+        });
+        return dimensions;
+    }
+    function stringify(array){
+        var string="";
+        array.forEach((element)=>{
+            string+=element;
+            string+=","
+        })
+        string.trim(",");
+        return string;
     }
   </script>
 </html>

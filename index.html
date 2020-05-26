@@ -56,18 +56,21 @@
         let height=Number(element.offsetHeight)
         let width=Number(element.offsetWidth)
         var fraction=1;
-        if(hHeight>=height){
-            var fraction=height/hHeight;
-            
+        var ar=hWidth/hHeight;
+        if(width<=height){
+            var calculatedHeight=ar>1?width/ar:width*ar;    //taking into account the origibak aspect ratio of the image
+            var calculatedWidth=width;
+        }else{
+            var calculatedWidth=ar>1?height*ar:height/ar;    //taking into account the origibak aspect ratio of the image
+            var calculatedHeight=height;
         }
-        else if(hHeight< height){
-            var 
-        }
+        adjustMaps(element,calculatedWidth,calculatedHeight);   //adjust the reactangular areas of interest
         
       } else {
         element.setAttribute("h-height", element.offsetHeight);
         element.setAttribute("h-width", element.offsetWidth);
       }
     });
+    
   </script>
 </html>

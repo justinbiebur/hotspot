@@ -1,4 +1,9 @@
 function Main(){
+    if(document.getElementById('hotspot-content')==null){
+        var hotspotContent=document.createElement('div')
+        hotspotContent.setAttribute('id','hotspot-content');
+        document.body.appendChild(hotspotContent);
+    }
     const hotspots = document.getElementsByClassName("hotspot");
     [...hotspots].forEach((element) => {
       if (element.hasAttribute("h-height") && element.hasAttribute("h-width")) {
@@ -88,6 +93,7 @@ function Main(){
                 console.log(setHeight,setWidth)
           
             element.setAttribute('coords',stringify(dimensions));
+            
         })
     }
 
@@ -111,6 +117,12 @@ function Main(){
         //console.log(string)
         return string;
     }
+
+
+
+
+
+
 
     function Run(){
         

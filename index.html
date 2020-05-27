@@ -5,6 +5,48 @@
 
     <title>Test</title>
     <script src="index.js"></script>
+    <style>
+
+#gate1{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+#gate2{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+#phone{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+#computer{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+body{
+  margin: 0;
+}
+    </style>
     <link rel="stylesheet" href="index.css"/>
   </head>
   <body>
@@ -14,16 +56,17 @@
         display: flex;
         width: 100%;
         height: 100%;
-        justify-content: center;
+        justify-content: space-evenly;
         align-items: center;
+        flex-direction: column;
       "
     >
-      <div class="hotspot" h-height="1250" h-width="1250" style="justify-content: center;align-items: center;display: flex; width: 70%; height: 70%;">
+      <div class="hotspot" h-height="1250" h-width="1250" style="width: 40%; height: 40%; flex:1">
         <img
           src="https://www.lokeshdhakar.com/projects/lightbox2/images/image-3.jpg"
           alt="Workplace"
           usemap="#workmap"
-          style="width: 100%;height: 100%; object-fit: contain;"
+         
         />
 
         <map name="workmap">
@@ -31,24 +74,40 @@
             shape="rect"
             coords="1000,500,1230,800"
             alt="Computer"
-            href="#gate2"
+           
             h-trigger="gate2"
           />
           <area
             shape="rect"
             coords="200,200,450,1240"
             alt="Computer"
-            href="#gate1"
+            
             h-trigger="gate1"
           />
          
          
         </map>
       </div>
+
+
+<div class="hotspot" style=" flex:1;width: 40%; height: 40%;"  h-width="400" h-height="379">
+  <img src="https://www.w3schools.com/html/workplace.jpg" alt="Workplace" usemap="#workmap2" width="400" height="379">
+
+<map name="workmap2">
+  <area shape="rect" coords="34,44,270,350" alt="Computer" h-trigger="computer" >
+  <area shape="rect" coords="290,172,333,250" alt="Phone" h-trigger="phone">
+  
+</map>
+</div>
+
     </div>
 
     <div id="h-items">
-      <div id="gate1">You Clicked on Gate 1</div>
+      <div id="gate1">Gate 1</div>
+      <div id="gate2">Gate 2</div>
+      <div id="computer">Computer</div>
+      <div id="phone">Phone</div>
+
     </div>
 
   </body>

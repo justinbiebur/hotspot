@@ -12,6 +12,17 @@
     cursor: pointer;
   }
 
+  area{
+      cursor: pointer;
+  }
   #h-items{
       display:none;
+  }
+  .hotspot{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .hotspot>img{
+    width: 100%;height: 100%; object-fit: contain;
   }

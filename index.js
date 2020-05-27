@@ -173,11 +173,13 @@ function Run() {
 Run();
 
 window.addEventListener("DOMContentLoaded", function() {
+    console.log("attached")
     var areas=document.getElementsByTagName("area");
    
     [...areas].forEach((element)=>{
-        element.addEventListener("mouseover",(e)=>{
+        element.addEventListener("click",(e)=>{
             handleHover(e);
         })
+       
     })
 }, false)

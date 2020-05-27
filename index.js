@@ -160,8 +160,9 @@ function on() {
   
   function off() {
     document.getElementById("hotspot-overlay").style.display = "none";
-    var select=document.getElementById("hotspot-overlay");
-    select.removeChild(select.lastChild) ;
+    var select=document.getElementById("hotspot-overlay"); 
+    document.getElementById('h-items').appendChild(select.lastChild)  // necessary to preserve element 
+    
   }
 
 function Run() {

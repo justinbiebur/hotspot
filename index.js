@@ -138,9 +138,27 @@ function stringify(array) {
 function handleHover(event) {
   var target = event.target.getAttribute("h-trigger");
   var elem = document.getElementById(target);
+    var parent=document.getElementById('hotspot-overlay');
+    parent.appendChild(elem);
+    on();
   
-document.create
+
 }
+
+
+/*
+For Hotspot- Overlay
+
+*/
+function on() {
+    document.getElementById("hotspot-overlay").style.display = "block";
+  }
+  
+  function off() {
+    document.getElementById("hotspot-overlay").style.display = "none";
+    var select=document.getElementById("hotspot-overlay");
+    select.removeChild(select.lastChild) ;
+  }
 
 function Run() {
   window.addEventListener("resize", () => {

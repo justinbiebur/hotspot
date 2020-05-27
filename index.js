@@ -1,3 +1,6 @@
+
+
+
 function Main() {
   if (document.getElementById("hotspot-content") == null) {
     var hotspotContent = document.createElement("div");
@@ -111,6 +114,7 @@ function adjustMaps(
     console.log(setHeight, setWidth);
 
     element.setAttribute("coords", stringify(dimensions));
+
   });
 }
 
@@ -166,3 +170,13 @@ function Run() {
   });
 }
 Run();
+
+window.addEventListener("DOMContentLoaded", function() {
+    var areas=document.getElementsByTagName("area");
+   
+    [...areas].forEach((element)=>{
+        element.addEventListener("mouseover",(e)=>{
+            handleHover(e);
+        })
+    })
+}, false)

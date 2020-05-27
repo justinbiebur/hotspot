@@ -36,6 +36,14 @@ function Main(){
      parent.children[0].style.height=calculatedHeight;
      
         [...parent.children[1].children].forEach((element)=>{
+            if(element.hasAttribute('h-coords')){
+                var hDimensions=numerify(element.getAttribute('h-coords'));
+            }
+            else{
+                let t= element.getAttribute('coords');
+                element.setAttribute('h-coords',t); //set new properties
+                var hDimensions=numerify(element.getAttribute('h-coords'));
+            }
             let dimensions=numerify(element.getAttribute('coords'));  //get co-ordinates in a proper format
             // if(calculatedWidth===width){
             //     var setWidth=(hWidth>=calculatedWidth?calculatedWidth/hWidth:hWidth/calculatedWidth);
@@ -53,8 +61,8 @@ function Main(){
             // }
 
             var setWidth=hWidth<=calculatedWidth?(calculatedWidth/hWidth):(calculatedWidth/hWidth);
-                dimensions[0]*=setWidth;
-                dimensions[2]*=setWidth;
+                dimensions[0]=hDimensions[0]*setWidth;
+                dimensions[2]=hDimensions[2]*setWidth;
 
             // if(calculatedHeight===height){
                
@@ -74,8 +82,8 @@ function Main(){
                 
             // }
             var setHeight=(hHeight<=calculatedHeight?calculatedHeight/hHeight:calculatedHeight/hHeight);
-                dimensions[1]*=setHeight;
-                dimensions[3]*=setHeight;
+                dimensions[1]=hDimensions[1]*setHeight;
+                dimensions[3]=hDimensions[3]*setHeight;
           
                 console.log(setHeight,setWidth)
           

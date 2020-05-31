@@ -138,4 +138,4 @@ Open a PR if you can fix an issue or open an issue in case you find any bugs or 
 
 ## License
 
-[MIT](https://opensource.org/licenses/MIT) © Debjyoti Banerjee(https://debjyoti.co)
+[MIT](https://opensource.org/licenses/MIT) © [Debjyoti Banerjee](https://debjyoti.co)

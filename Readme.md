@@ -73,18 +73,17 @@ For example if you include an image whose original dimesions are 1000*750 then, 
 For example,
 
 ```html
- <div class="hotspot"  style="width:100%;height:100%;padding-top: 30px">
+ <div class="hotspot"  style="width: 100%; height: 100%; padding-top: 30px">
             
-            <img src="./assets/example2.jpg"
-                alt="Workplace" usemap="#workmap" />
+    <img src="./assets/example2.jpg" alt="Workplace" usemap="#workmap" />
 
-            <map name="workmap">
-                <area shape="rect" coords="752,55,910,135" alt="Small Glasses" h-trigger="glasses-small" />
-                <area shape="rect" coords="152,350,260,440" alt="WhiteDot" h-trigger="white-dot" />
-                <area shape="rect" coords="97,488,630,750" alt="Notebook" h-trigger="Notebook" />
+    <map name="workmap">
+        <area shape="rect" coords="752,55,910,135" alt="Small Glasses" h-trigger="glasses-small" />
+        <area shape="rect" coords="152,350,260,440" alt="WhiteDot" h-trigger="white-dot" />
+        <area shape="rect" coords="97,488,630,750" alt="Notebook" h-trigger="Notebook" />
 
             </map>
-        </div>
+</div>
 
 
 ```
@@ -92,11 +91,11 @@ For example,
 ```html
   <div id="h-items">
        
-       <div id="white-dot">White Dot</div>
+       <div id="white-dot"> White Dot </div>
         
-       <div id="glasses-small">glasses-small</div>
+       <div id="glasses-small"> glasses-small </div>
         
-       <div id="Notebook">Notebook</div>
+       <div id="Notebook"> Notebook </div>
 
 
   </div>
@@ -114,9 +113,9 @@ So if your ``` h-items``` conatins an item with id ``` glasses-small ```, includ
   
   <map name="workmap">
                 
-                <area shape="rect" coords="752,55,910,135" alt="Small Glasses"  h-trigger="glasses-small" />
+    <area shape="rect" coords="752,55,910,135" alt="Small Glasses"  h-trigger="glasses-small" />
     
-            </map>
+  </map>
 
     <!--- element with id="glasses-small" will appear when the above area is clicked on --->
 

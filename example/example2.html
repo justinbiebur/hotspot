@@ -1,0 +1,71 @@
+<html>
+  <head>
+      
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Test</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../lib/dist/hotspot.css"/>
+    <script src="../lib/dist/hotspot.js"></script>
+    <script src="../lib/dist/hotspot.js"></script>
+    <style>
+        body{
+            margin:0;
+            font-family: 'Montserrat', sans-serif;
+        }
+        h1{
+            padding-top: 40px;
+        }
+    </style>
+    </head>
+
+
+    <body>
+        <h1>HOTSPOT EXAMPLE</h1>
+        <div id="content">
+            <div class="hotspot" h-height="750" h-width="1000" style="padding-top: 30px">
+                <img
+                  src="https://images.unsplash.com/photo-1531256379416-9f000e90aacc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+                  alt="Workplace"
+                  usemap="#workmap"
+                 
+                />
+        
+                <map name="workmap">
+                  <area
+                    shape="rect"
+                    coords="762,61,890,135"
+                    alt="Small Glasses"
+                   
+                    h-trigger="glasses-small"
+                  />
+                  <area
+                    shape="rect"
+                    coords="152,99,160,200"
+                    alt="WhiteDot"
+                    
+                    h-trigger="white-dot"
+                  />
+                  <area
+                    shape="rect"
+                    coords="97,188,630,750"
+                    alt="Notebook"
+                    
+                    h-trigger="Notebook"
+                  />
+                 
+                 
+                </map>
+              </div>
+        </div>
+
+
+        <div id="h-items">
+            <div id="white-dot">White Dot</div>
+            <div id="glasses-small">glasses-small</div>
+            <div id="Notebook">Notebook</div>
+            
+      
+          </div>
+    </body>
+    </html>

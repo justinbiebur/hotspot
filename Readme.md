@@ -23,10 +23,9 @@ dist/
 Include files:
 
 ```html
-<script src="/path/to/hotspot.js"></script><!-- It is required -->
+<script src="/path/to/hotspot.js"> </script> <!-- It is required -->
 
-<link  href="/path/to/hotspot.css" rel="stylesheet">
-<!-- It is required -->
+<link  href="/path/to/hotspot.css" rel="stylesheet"> <!-- It is required -->
 
 ```
 
@@ -78,11 +77,15 @@ For example,
     <img src="./assets/example2.jpg" alt="Workplace" usemap="#workmap" />
 
     <map name="workmap">
+        
         <area shape="rect" coords="752,55,910,135" alt="Small Glasses" h-trigger="glasses-small" />
+        
         <area shape="rect" coords="152,350,260,440" alt="WhiteDot" h-trigger="white-dot" />
+        
         <area shape="rect" coords="97,488,630,750" alt="Notebook" h-trigger="Notebook" />
 
-            </map>
+    </map>
+
 </div>
 
 

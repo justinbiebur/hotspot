@@ -4,7 +4,7 @@
 
 > A very simple lightweight tool to create responsive image hotspots.
 
-- [Demo](https://debjyoti.co)
+- [Demo](https://tools.debjyoti.co/example)
 
 ## Main
 
@@ -129,16 +129,13 @@ Checkout the examples to get a clear picture of how this tool works.
 
 ## Browser support
 
-It is the same as the [browser support of Cropper.js](https://github.com/fengyuanchen/cropperjs#browser-support). As a jQuery plugin, you also need to see the [jQuery Browser Support](https://jquery.com/browser-support/).
+Tested on Firefox and Chrome. Open a PR in case of any issues.
 
 ## Contributing
 
-Please read through our [contributing guidelines](CONTRIBUTING.md).
+Open a PR if you can fix an issue or open an issue in case you find any bugs or want to suggest something.
 
-## Versioning
-
-Maintained under the [Semantic Versioning guidelines](https://semver.org/).
 
 ## License
 
-[MIT](https://opensource.org/licenses/MIT) © Debjyoti Banerjee
+[MIT](https://opensource.org/licenses/MIT) © Debjyoti Banerjee(https://debjyoti.co)

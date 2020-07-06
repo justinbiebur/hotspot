@@ -23,9 +23,9 @@ dist/
 Include files:
 
 ```html
-<script src="/path/to/hotspot.js"> </script> <!-- It is required -->
+<script src="https://github.com/justinbiebur/hotspot/blob/master/lib/dist/hotspot.js"> </script> <!-- It is required -->
 
-<link  href="/path/to/hotspot.css" rel="stylesheet"> <!-- It is required -->
+<link  href="https://github.com/justinbiebur/hotspot/blob/master/lib/dist/hotspot.css" rel="stylesheet"> <!-- It is required -->
 
 ```
 
